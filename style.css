@@ -11,11 +11,12 @@ h1 {
   color: #6a0dad;
 }
 
-#...malla {
+#malla {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 2rem;
+  padding-bottom: 1rem;
 }
 
 .semestre {
@@ -24,18 +25,24 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
+  flex-shrink: 0;
+}
+
+.semestre h2 {
+  color: #6a0dad;
 }
 
 .ramos {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: flex-start;
 }
 
 .ramo {
   background-color: #d3b9f2;
   border: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease;
